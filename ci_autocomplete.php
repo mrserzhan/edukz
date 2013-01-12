@@ -38,11 +38,8 @@
 * @property CI_Xmlrpc $xmlrpc
 * @property CI_Xmlrpcs $xmlrpcs
 * @property CI_Zip $zip
+* @property Smarty $smarty
 */
-
-/**
- * @property Smarty $smarty Template
- */
 
 class CI_Controller {};
 

@@ -1,0 +1,40 @@
+/* 
+    Document   : style.css
+    Created on : 13.01.2013, 3:34:50
+    Author     : Erko
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root { 
+    display: block;
+}
+
+html, body, .container, .container-fluid {
+    height: 100%;
+}
+
+body > .container, body > .container-fluid {
+    height: auto; min-height: 100%;
+}
+
+.footer {
+    clear: both;
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    margin-top: -120px;
+    height: 80px;
+    padding: 20px 0;
+    border-top: 1px solid #e5e5e5;
+    background-color: #f5f5f5;
+}
+
+.footer-links {
+    margin: 10px 0;
+}
+
+.footer-links li {
+    display: inline;
+    padding: 0 2px;
+}
