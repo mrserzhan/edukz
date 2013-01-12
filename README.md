@@ -1,0 +1,4 @@
+edukz
+=====
+
+EDU.kz
