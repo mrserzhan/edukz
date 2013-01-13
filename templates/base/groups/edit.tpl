@@ -1,5 +1,5 @@
 {extends file="../main.tpl"}
-{block name="title"}Add group{/block}
+{block name="title"}Edit group {$group.g_name}{/block}
 {block name="page_groups"}active{/block}
 {block name="content"}
 <div class="container-fluid content">
