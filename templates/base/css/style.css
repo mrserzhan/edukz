@@ -10,21 +10,12 @@ root {
     display: block;
 }
 
-html, body, .container, .container-fluid {
-    height: 100%;
-}
-
 body > .container, body > .container-fluid {
-    height: auto; min-height: 100%;
+    min-height: 500px;
 }
 
 .footer {
-    clear: both;
-    position: relative;
-    z-index: 10;
     text-align: center;
-    margin-top: -120px;
-    height: 80px;
     padding: 20px 0;
     border-top: 1px solid #e5e5e5;
     background-color: #f5f5f5;
@@ -37,4 +28,9 @@ body > .container, body > .container-fluid {
 .footer-links li {
     display: inline;
     padding: 0 2px;
+}
+
+
+.checkbox-group {
+    padding-left: 20px;
 }

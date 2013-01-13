@@ -10,11 +10,34 @@
         <div class="span10">
             <div class="page-header">
                 <ul class="nav nav-pills">
-                    <li><a href="{base_url()}groups/">Groups</a></li>
-                    <li class="active"><a href="{base_url()}groups/add">Add group</a></li>
+                    <li class="active"><a href="{base_url()}groups/">Groups</a></li>
+                    <li><a href="{base_url()}groups/add">Add group</a></li>
                 </ul>
-                <h1>Add group</h1>
+                <h1>Groups list</h1>
             </div>
+            <table class="table table-bordered table-hover">
+                <tr>
+                    <th>ID</th>
+                    <th>Group name</th>
+                    <th>Description</th>
+                    <th width=100></th>
+                    <th width=100></th>
+                </tr>
+                {foreach $groups as $group}
+                    <tr>
+                        <td>{$group.g_id}</td>
+                        <td><a href="{base_url()}groups/show/{$group.g_id}">{$group.g_name}</a></td>
+                        <td>{$group.g_desc}</td>
+                        <td><a href="{base_url()}groups/edit/{$group.g_id}">Edit</a></td>
+                        <td><a href="{base_url()}groups/delete/{$group.g_id}">Delete</a></td>
+                    </tr>
+                {foreachelse}
+                    <tr>
+                        <td colspan="5">Groups not found</td>
+                    </tr>
+                {/foreach}
+            </table>
+
         </div>
     </div>
 </div>

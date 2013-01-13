@@ -17,13 +17,30 @@
 
             </div>
 
-            <form class="form-horizontal">
-                <div class="control-group">
-                    <label class="control-label" for="name">Name</label>
-                    <div class="controls">
-                        <input type="text" class="input-xlarge" id="name" name="name" placeholder="Name">
-                        <span class="label label-warning help-inline">Warning</span>
+            <form class="form-horizontal" method="POST">
+                <h4>Name</h4>
+                <input type="text" class="span4" id="name" name="name" placeholder="Name">
+                <span class="label help-inline">{form_error('name')}</span>
+                <br/><br/>
+
+                <h4>Desciption</h4>
+                <textarea rows="3" class="span4" name="desc"></textarea>
+                <br/><br/>
+
+                <h4>Privelegues</h4>
+                {foreach from=$privs key=g_name item=group}
+                    <div class="checkbox-group">
+                        <h6>{$g_name}</h6>
+                        {foreach from=$group key=key item=item}
+                            <label class="checkbox">
+                                <input type="checkbox" name="{$key}" value="123"> {$item}
+                            </label>
+                        {/foreach}
                     </div>
+                {/foreach}
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">Add</button>
+                    <a class="btn" href="{base_url()}groups/">Back</a>
                 </div>
             </form>
 
