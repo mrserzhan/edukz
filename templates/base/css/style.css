@@ -34,3 +34,11 @@ body > .container, body > .container-fluid {
 .checkbox-group {
     padding-left: 20px;
 }
+
+.container-fluid .breadcrumb {
+    margin-top: 10px;
+}
+
+.leftside {
+    padding: 10px 0;
+}

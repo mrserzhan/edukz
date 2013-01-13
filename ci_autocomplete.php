@@ -39,6 +39,7 @@
 * @property CI_Xmlrpcs $xmlrpcs
 * @property CI_Zip $zip
 * @property Smarty $smarty
+* @property Breadcrumb $breadcrumb
 */
 
 class CI_Controller {};

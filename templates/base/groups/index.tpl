@@ -4,15 +4,17 @@
 {block name="content"}
 <div class="container-fluid content">
     <div class="row-fluid">
-        <div class="span2">
-
+        <div class="span2 leftside">
+            <ul class="nav nav-pills nav-stacked">
+                <li class="active"><a href="{base_url()}groups/">Groups</a></li>
+                <li><a href="{base_url()}groups/add">Add group</a></li>
+            </ul>
         </div>
         <div class="span10">
+
+            {breadcrumb}
+
             <div class="page-header">
-                <ul class="nav nav-pills">
-                    <li class="active"><a href="{base_url()}groups/">Groups</a></li>
-                    <li><a href="{base_url()}groups/add">Add group</a></li>
-                </ul>
                 <h1>Groups list</h1>
             </div>
             <table class="table table-bordered table-hover">

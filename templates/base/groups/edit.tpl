@@ -7,7 +7,7 @@
         <div class="span2 leftside">
             <ul class="nav nav-pills nav-stacked">
                 <li><a href="{base_url()}groups/">Groups</a></li>
-                <li class="active"><a href="{base_url()}groups/add">Add group</a></li>
+                <li><a href="{base_url()}groups/add">Add group</a></li>
             </ul>
         </div>
         <div class="span10">
@@ -15,33 +15,32 @@
             {breadcrumb}
 
             <div class="page-header">
-                <h1>Add group</h1>
-
+                <h1>Edit group {$group.g_name}</h1>
             </div>
 
             <form class="form-horizontal" method="POST">
                 <h4>Name</h4>
-                <input type="text" class="span4" id="name" name="name" placeholder="Name">
+                <input type="text" class="span4" id="name" value="{$group.g_name}" name="name" placeholder="Name">
                 <span class="label help-inline">{form_error('name')}</span>
                 <br/><br/>
 
                 <h4>Desciption</h4>
-                <textarea rows="3" class="span4" name="desc"></textarea>
+                <textarea rows="3" class="span4" name="desc">{$group.g_desc}</textarea>
                 <br/><br/>
 
                 <h4>Privelegues</h4>
-                {foreach from=$privs key=g_name item=group}
+                {foreach from=$privs key=g_name item=groups}
                     <div class="checkbox-group">
                         <h6>{$g_name}</h6>
-                        {foreach from=$group key=key item=item}
+                        {foreach from=$groups key=key item=item}
                             <label class="checkbox">
-                                <input type="checkbox" name="{$key}" value="123"> {$item}
+                                <input type="checkbox" {if in_array($key,$group.g_privs)}checked="checked"{/if} name="{$key}" value="123"> {$item}
                             </label>
                         {/foreach}
                     </div>
                 {/foreach}
                 <div class="form-actions">
-                    <button type="submit" class="btn btn-primary">Add</button>
+                    <button type="submit" class="btn btn-primary">Save</button>
                     <a class="btn" href="{base_url()}groups/">Back</a>
                 </div>
             </form>
